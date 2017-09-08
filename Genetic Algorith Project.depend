@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1504877436 source:d:\genetic algorith project\main.cpp
+	<iostream>
+	<Equation.h>
+	<string>
+	<vector>
+	<cstdlib>
+	<time.h>
+	<stdlib.h>
+
+1504732665 d:\genetic algorith project\include\equation.h
+	<string>
+	<time.h>
+	<stdlib.h>
+	<iostream>
+	<stdio.h>
+	<cmath>
+
+1504859570 source:d:\genetic algorith project\src\equation.cpp
+	"Equation.h"
+
