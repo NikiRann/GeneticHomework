@@ -58,7 +58,7 @@ std::string Mutate(std::string input)
         {
             if (c[i] >= '0' && c[i] <= '9')
             {
-                int gnum = rand() % 10;
+                int gnum = rand() % 9 + 1;
                 char digit = gnum + '0';
                 c[i] = digit;
             }
@@ -133,15 +133,18 @@ int main()
         {
             if (equations[i].get_fitness() == 2.0)
             {
-                int countedDigits = 2;
+                int countedDigits = 0;
                 std::cout << "Generations: " << generations << " Equation: ";
                 for (int p = 0; p < equations[i].get_equation().length(); p ++)
                 {
-                    std::cout << equations[i].get_equation()[p];
-                    if (equations[i].get_equation()[p] > '0' && equations[i].get_equation()[p] < '9')
-                        countedDigits ++;
+                    //std::cout << countedDigits << " ";
                     if (countedDigits == k)
                         break;
+
+                    std::cout << equations[i].get_equation()[p];
+                    if (equations[i].get_equation()[p] >= '0' && equations[i].get_equation()[p] <= '9')
+                        countedDigits ++;
+
                 }
                 std::cout << "\n";
                 found = true;
